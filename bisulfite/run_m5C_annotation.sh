@@ -93,14 +93,3 @@ rm -rf $LOG_DIR
 mkdir -p $LOG_DIR
 
 RunPeakGeneLink "$BED_DIR" $ANNODATION_DIR $STATS_DIR $EXP_MTX
-
-## for batch2
-BED_DIR="$BASE/m5C_site/caRNA/batch2/merge_bed"
-ANALYSIS_DIR="$BASE/m5C_annotation/caRNA/batch2"
-ANNODATION_DIR="$ANALYSIS_DIR/annotation"
-STATS_DIR="$ANALYSIS_DIR/stats"
-
-rm -rf $LOG_DIR
-mkdir -p $LOG_DIR
-
-RunPeakGeneLink "$BED_DIR" $ANNODATION_DIR $STATS_DIR $EXP_MTX

@@ -100,31 +100,9 @@ INPUT_DIR="$BASE/m5C_site/caRNA/batch1/bed"
 OUTPUT_DIR="$BASE/m5C_site/caRNA/batch1/merge_bed"
 LOG_DIR="$BASE/log/caRNA/call_m5c/batch1"
 
-## exon-based
+## 
 SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch1/exon/"
 run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR 'merge'
-#run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR 'rep1'
-#run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR 'rep2'
 
 cd $OUTPUT_DIR
 get_hypo_bed PDX148_EV_bisulfite.merge.bed PDX148_TET2-bisulfite.merge.bed PDX148_m5C_site_repress_by_TET2.bed
-#get_repel_bed PDX148_EV_bisulfite.merge.bed PDX148_TET2-bisulfite.merge.bed PDX148_m5C_site_repress_by_TET2.bed
-
-## for caRNA-batch2
-INPUT_DIR="$BASE/m5C_site/caRNA/batch2/bed"
-OUTPUT_DIR="$BASE/m5C_site/caRNA/batch2/merge_bed"
-LOG_DIR="$BASE/log/caRNA/call_m5c/batch2"
-
-## exon-based
-SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch2/exon/"
-run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR "merge"
-#run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR "rep1"
-#run_sbatch_merge_m5c_bed $SAMPLE_DIR $INPUT_DIR $OUTPUT_DIR "rep2"
-
-cd $OUTPUT_DIR
-get_repel_bed PDX148_EV_bisulfite.merge.bed PDX148_EV-IFN_bisulfite.merge.bed PDX148_EV_IFN_repressed.bed
-get_repel_bed PDX148_EV-IFN_bisulfite.merge.bed PDX148_EV_bisulfite.merge.bed PDX148_EV_IFN_induced.bed
-get_repel_bed PDX148_TET2_bisulfite.merge.bed PDX148_TET2-IFN_bisulfite.merge.bed PDX148_TET2_IFN_repressed.bed
-get_repel_bed PDX148_TET2-IFN_bisulfite.merge.bed PDX148_TET2_bisulfite.merge.bed PDX148_TET2_IFN_induced.bed
-get_repel_bed PDX148_EV_bisulfite.merge.bed PDX148_TET2_bisulfite.merge.bed PDX148_EV_TET2_repressed.bed
-get_repel_bed PDX148_TET2_bisulfite.merge.bed PDX148_EV_bisulfite.merge.bed PDX148_EV_TET2_induced.bed

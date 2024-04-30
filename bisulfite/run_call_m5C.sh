@@ -31,7 +31,6 @@ BASE=`realpath ~/chen_yang_lab/ying_qing/tet1/bisulfite_seq/inhouse_data/`
 SCRIPTS="$BASE/scripts"
 THREAD=10
 
-: <<'END'
 ## for caRNA-batch1
 OUTPUT_DIR="$BASE/m5C_site/caRNA/batch1/original_output"
 LOG_DIR="$BASE/log/caRNA/call_m5c/batch1"
@@ -43,19 +42,3 @@ SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch1/exon/"
 ## intron-based
 SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch1/intron/"
 #run_sbatch_call_m5c $SAMPLE_DIR $OUTPUT_DIR $LOG_DIR "intron"
-
-
-## for caRNA-batch2
-OUTPUT_DIR="$BASE/m5C_site/caRNA/batch2/original_output"
-LOG_DIR="$BASE/log/caRNA/call_m5c/batch2"
-
-create_folder $OUTPUT_DIR
-create_folder $LOG_DIR
-## exon-based
-SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch2/exon/"
-run_sbatch_call_m5c $SAMPLE_DIR $OUTPUT_DIR $LOG_DIR "exon"
-
-## intron-based
-SAMPLE_DIR="$BASE/sample/caRNA/RNA-m5C/batch2/intron/"
-run_sbatch_call_m5c $SAMPLE_DIR $OUTPUT_DIR $LOG_DIR "intron"
-END

@@ -27,17 +27,10 @@ BASE=`realpath ~/chen_yang_lab/ying_qing/tet1/bisulfite_seq/inhouse_data/`
 SCRIPTS="$BASE/scripts"
 THREAD=5
 
-: <<'END'
+
 ## for caRNA-batch1
 MATRIX_DIR="$BASE/sample/caRNA"
 LOG_DIR="$BASE/log/caRNA/cutadapt/batch1"
 FASTQ_DIR="$BASE/fastq/caRNA/batch1"
 run_sbatch_cutadapt $MATRIX_DIR/sample.batch1.matrix $FASTQ_DIR/original $FASTQ_DIR $LOG_DIR
-END
-
-## for caRNA-batch2
-MATRIX_DIR="$BASE/sample/caRNA"
-LOG_DIR="$BASE/log/caRNA/cutadapt/batch2"
-FASTQ_DIR="$BASE/fastq/caRNA/batch2"
-run_sbatch_cutadapt $MATRIX_DIR/sample.batch2.matrix $FASTQ_DIR/original $FASTQ_DIR $LOG_DIR
 

@@ -15,14 +15,7 @@ function matrixToRun {
 
 BASE=`realpath ~/chen_yang_lab/ying_qing/tet1/bisulfite_seq/inhouse_data/`
 
-: <<'END'
 ## for caRNA-batch1
 FASTQ_DIR="$BASE/fastq/caRNA/batch1/original"
 cd $FASTQ_DIR
 matrixToRun $BASE/sample/caRNA/sample.batch1.matrix
-END
-
-## for caRNA-batch1
-FASTQ_DIR="$BASE/fastq/caRNA/batch2/original"
-cd $FASTQ_DIR
-matrixToRun $BASE/sample/caRNA/sample.batch2.matrix
